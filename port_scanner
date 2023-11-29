@@ -1,0 +1,18 @@
+# port scan
+
+from socket import *
+
+u = raw_input("enter the ip = ")
+port = input("enter the port = ")
+
+s = socket(AF_INET , SOCK_STREAM)
+r = s.connect_ex((u , port))
+
+if r == 0:
+	print "port open"
+else:
+	print "port close"
+	
+s.close()
+
+
